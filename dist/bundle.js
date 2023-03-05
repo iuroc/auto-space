@@ -33,9 +33,9 @@ function parseText(text) {
     // 和两端的中文间均增加空格
     var bothSpace = "[a-zA-Z0-9-&*~/+=|]";
     // 和左边的中文间增加空格
-    var leftSpace = "[(]";
+    var leftSpace = "[($]";
     // 和右边的中文间增加空格
-    var rightSpace = "[)]";
+    var rightSpace = "[)%]";
     var rules = [
         [hans, bothSpace, '$1 $2'],
         [bothSpace, hans, '$1 $2'],

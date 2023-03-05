@@ -36,9 +36,9 @@ function parseText(text: string) {
     // 和两端的中文间均增加空格
     let bothSpace = `[a-zA-Z0-9-&*~/+=|]`
     // 和左边的中文间增加空格
-    let leftSpace = `[(]`
+    let leftSpace = `[($]`
     // 和右边的中文间增加空格
-    let rightSpace = `[)]`
+    let rightSpace = `[)%]`
     const rules = [
         [hans, bothSpace, '$1 $2'],
         [bothSpace, hans, '$1 $2'],
