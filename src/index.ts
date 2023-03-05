@@ -9,13 +9,10 @@ const outputEle = <HTMLTextAreaElement>document.querySelector('.output')
 const startEle = <HTMLButtonElement>document.querySelector('.start')
 /** 清空 */
 const clearEle = <HTMLButtonElement>document.querySelector('.clear')
-/** 默认待处理文本 */
-let text = `
-        中文abc中-文&中*文（abc中~文）中文(abcd)中文
-        概率=符合样本数/总样本数
-        `.replace(/(\n\s*)/g, '\n').replace(/(^\n)|(\n$)/g, '')
+
 // 设置默认待处理文本
-inputEle.value = text
+// setDefaultInput()
+
 startEle.onclick = () => {
     let inputText = inputEle.value
     let outputText = parseText(inputText)
@@ -53,4 +50,15 @@ function parseText(text: string) {
         text = text.replace(reg, rule[2])
     })
     return text
+}
+
+/** 设置默认待处理文本 */
+function setDefaultInput() {
+    /** 默认待处理文本 */
+    let text = `
+    中文abc中-文&中*文（abc中~文）中文(abcd)中文
+    概率=符合样本数/总样本数
+    `.replace(/(\n\s*)/g, '\n').replace(/(^\n)|(\n$)/g, '')
+    // 设置默认待处理文本
+    inputEle.value = text
 }

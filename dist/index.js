@@ -9,10 +9,8 @@ var outputEle = document.querySelector('.output');
 var startEle = document.querySelector('.start');
 /** 清空 */
 var clearEle = document.querySelector('.clear');
-/** 默认待处理文本 */
-var text = "\n        \u4E2D\u6587abc\u4E2D-\u6587&\u4E2D*\u6587\uFF08abc\u4E2D~\u6587\uFF09\u4E2D\u6587(abcd)\u4E2D\u6587\n        \u6982\u7387=\u7B26\u5408\u6837\u672C\u6570/\u603B\u6837\u672C\u6570\n        ".replace(/(\n\s*)/g, '\n').replace(/(^\n)|(\n$)/g, '');
 // 设置默认待处理文本
-inputEle.value = text;
+// setDefaultInput()
 startEle.onclick = function () {
     var inputText = inputEle.value;
     var outputText = parseText(inputText);
@@ -48,4 +46,11 @@ function parseText(text) {
         text = text.replace(reg, rule[2]);
     });
     return text;
+}
+/** 设置默认待处理文本 */
+function setDefaultInput() {
+    /** 默认待处理文本 */
+    var text = "\n    \u4E2D\u6587abc\u4E2D-\u6587&\u4E2D*\u6587\uFF08abc\u4E2D~\u6587\uFF09\u4E2D\u6587(abcd)\u4E2D\u6587\n    \u6982\u7387=\u7B26\u5408\u6837\u672C\u6570/\u603B\u6837\u672C\u6570\n    ".replace(/(\n\s*)/g, '\n').replace(/(^\n)|(\n$)/g, '');
+    // 设置默认待处理文本
+    inputEle.value = text;
 }
