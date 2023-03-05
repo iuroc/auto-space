@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版优化</title>
+    <style>
+        .main {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .mb-15 {
+            margin-bottom: 15px;
+        }
+
+        .me-10 {
+            margin-right: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        textarea {
+            height: 150px;
+            width: calc(100% - 20px);
+            outline: none;
+            font-size: 18px;
+            padding: 10px;
+            resize: none;
+            border: 2px dashed #aaaaaa;
+            word-break: break-all;
+            transition: all .3s;
+        }
+
+        textarea:focus {
+            background-color: #eeeeee;
+            border-style: solid;
+        }
+
+        ::selection {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body ondragstart="return false">
+    <div class="main">
+        <h2 class="text-center">排版优化</h2>
+        <textarea class="input mb-15" autofocus></textarea>
+        <button class="mb-15 me-10 start">排版优化</button>
+        <button class="mb-15 me-10 copy" data-clipboard-target=".output">复制结果</button>
+        <button class="mb-15 clear">清空</button>
+        <textarea class="output" autofocus></textarea>
+    </div>
+    <script src="./dist/bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "build": "tsc && browserify dist/index.js -o dist/bundle.js && uglifyjs dist/bundle.js -mc -o dist/bundle.min.js"
+    },
+    "dependencies": {
+        "clipboard": "^2.0.11"
+    }
+}
