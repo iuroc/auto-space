@@ -25,6 +25,15 @@
             text-align: center;
         }
 
+        .float-end {
+            float: right;
+        }
+
+        a {
+            color: #888888;
+            text-decoration: none;
+        }
+
         textarea {
             height: 150px;
             width: calc(100% - 20px);
@@ -55,7 +64,8 @@
         <button class="mb-15 me-10 start">排版优化</button>
         <button class="mb-15 me-10 copy" data-clipboard-target=".output">复制结果</button>
         <button class="mb-15 clear">清空</button>
-        <textarea class="output" autofocus></textarea>
+        <a class="float-end" href="https://github.com/oyps/auto-space" target="_blank">Github</a>
+        <textarea class="output mb-15" autofocus></textarea>
     </div>
     <script src="./dist/bundle.min.js"></script>
 </body>
